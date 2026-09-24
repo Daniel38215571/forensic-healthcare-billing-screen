@@ -1,0 +1,27 @@
+# Data
+*.xlsx
+*.xls
+*.csv
+!data/sample/*.csv
+!data/sample/*.xlsx
+
+# Outputs
+outputs/
+peer_charts/
+*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
