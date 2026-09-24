@@ -25,3 +25,6 @@ venv/
 Thumbs.db
 .vscode/
 .idea/
+
+# Allow the tracked visual report
+!docs/*.pdf
