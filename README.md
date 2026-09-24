@@ -8,9 +8,29 @@ Identify provider/service combinations whose submitted charges or charge-to-allo
 
 > This is a screening aid, not a fraud determination.
 
-## Data
-- Input: Excel workbook with provider, HCPCS, state, type, beneficiaries, services, average charge, average allowed, average payment, and charge-to-allowed ratio.
-- Public repo uses synthetic sample data only.
+## Sample Output
+
+**Charge-to-allowed ratio: observed rows vs peer benchmark**
+
+![Ratio distribution vs peer benchmark](docs/figures/01_ratio_vs_peer_distribution.png)
+
+**Providers with the highest weighted ratio vs peers**
+
+![Provider ratio vs peer](docs/figures/02_provider_ratio_vs_peer.png)
+
+**Provider scale vs peer-relative elevation**
+
+![Scale vs elevation](docs/figures/03_scale_vs_peer_elevation.png)
+
+**Top screening candidates**
+
+![Screening heatmap](docs/figures/04_screening_heatmap.png)
+
+**Peer-group specificity used per row**
+
+![Peer group coverage](docs/figures/05_peer_group_coverage.png)
+
+Full report: [`docs/peer_group_visual_report.pdf`](docs/peer_group_visual_report.pdf)
 
 ## Peer Hierarchy
 1. Same HCPCS + provider type + state
@@ -18,19 +38,20 @@ Identify provider/service combinations whose submitted charges or charge-to-allo
 3. Same HCPCS
 
 ## Metrics
-- Weighted peer benchmarks (weighted by services)
+- Services-weighted peer benchmarks
 - Charge-to-peer-charge ratio
 - Ratio-to-peer-ratio
 - Percentile rank
 - Robust z-score (median/MAD)
-- Screening score and band
+- Composite screening score and band
 
-## Visualizations
-- Charge-to-allowed ratio distribution vs peer benchmark
-- Provider ratio vs peer ranking
-- Provider scale vs peer-relative elevation
-- Top screening candidates heatmap
-- Peer-group coverage
+## Documentation
+- [Data dictionary](docs/data_dictionary.md)
+- [Methodology](docs/methodology.md)
+
+## Data
+- Input: Excel workbook with provider, HCPCS, state, type, beneficiaries, services, average charge, average allowed, average payment, and charge-to-allowed ratio.
+- Public repo uses synthetic sample data only.
 
 ## How to Run
 ~~~
